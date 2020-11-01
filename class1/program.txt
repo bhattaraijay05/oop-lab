@@ -1,0 +1,3 @@
+A person is at location (10,10), moves stepwise to directions based on (N, W, E, S). If the person reaches location (7,11) treasure is found, at location (5,11) a maneater is found . Use a switch case.
+4. Consider two structures : Distance (feet and inches) and Room(length and width). For a dining room instance, calculate the area in square feet. 
+5. Create a structure circle, with suitable attributes and functions, assume (functions name only) different colors to draw the circle, and fill the c

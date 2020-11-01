@@ -1,0 +1,3 @@
+1. Write a C++ program to create a class called COMPLEX and implement the following overloading functions ADD that return a COMPLEX number. i. ADD (a, s2) – where a is an integer (real part) and s2 is a complex number. ii. ADD (s1, s2) – where s1 and s2 are complex numbers.
+
+2. Write a C++ program to create a struct Distance with feet and inches. Implement the following overloading functions display i. display(Dist d) - d is an object of  Distance ii. display(Float f) - f is an input from the user 
