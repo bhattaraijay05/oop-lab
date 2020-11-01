@@ -1,0 +1,9 @@
+2. Given that an EMPLOYEE class contains following members: Employee Number, Employee Name, Basic, DA, IT, Net Salary. Member functions: to read the data, to calculate Net Salary and to print data members.  Write a C++ program to read the data of N employees and compute Net Salary of each employee. (Dearness Allowance (DA) = 52% of Basic and Income Tax (IT) = 30% of the gross salary. Net Salary = Basic + DA - IT).
+
+3. Write a C++ program to create array of object of class student with data members for storing his USN marks of six subjects for three tests and member functions to input display and calculate the avg marks for each subject taking best two of three subjects. Write a tester program to test these classes.
+
+
+3.Given that an EMPLOYEE class contains following members: Employee Number, Employee Name, Basic, DA, IT, Net Salary. Member functions: to read the data, to calculate Net Salary and to print data members.  Write a C++ program to read the data of N employees and compute Net Salary of each employee. (Dearness Allowance (DA) = 52% of Basic and Income Tax (IT) = 30% of the gross salary. Net Salary = Basic + DA - IT).
+- prepare default constructor, parameterized constructor
+- array of objects
+- add 
