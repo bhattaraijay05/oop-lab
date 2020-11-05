@@ -5,6 +5,7 @@ using namespace std;
 
 class Complex
 {
+<<<<<<< HEAD
 
 public:
     int real_number, imaginary_number;
@@ -12,6 +13,15 @@ public:
     void display_data();
     void ADD(int, Complex);
     void ADD(Complex, Complex);
+=======
+    int real_number, imaginary_number;
+
+public:
+    void read_data();
+    void display_data();
+    friend Complex ADD(int, Complex);
+    friend Complex ADD(Complex, Complex);
+>>>>>>> e201131b283667ec5f49f756ae89138070436687
 };
 
 void Complex::read_data()
