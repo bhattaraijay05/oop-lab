@@ -1,19 +1,8 @@
-// Write a C++ program to create a class called COMPLEX and implement the following overloading functions ADD that return a COMPLEX number. i. ADD (a, s2) – where a is an integer (real part) and s2 is a complex number. ii. ADD (s1, s2) – where s1 and s2 are complex numbers.
-
 #include <iostream>
 using namespace std;
 
 class Complex
 {
-<<<<<<< HEAD
-
-public:
-    int real_number, imaginary_number;
-    void read_data();
-    void display_data();
-    void ADD(int, Complex);
-    void ADD(Complex, Complex);
-=======
     int real_number, imaginary_number;
 
 public:
@@ -21,7 +10,6 @@ public:
     void display_data();
     friend Complex ADD(int, Complex);
     friend Complex ADD(Complex, Complex);
->>>>>>> e201131b283667ec5f49f756ae89138070436687
 };
 
 void Complex::read_data()
