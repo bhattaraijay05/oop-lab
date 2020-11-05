@@ -2,7 +2,6 @@
 
 #include <iostream>
 using namespace std;
-
 struct Distance
 {
     float feet, inches;
