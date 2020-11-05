@@ -1,0 +1,4 @@
+2. Write a program to find the transpose of a matrix using friend function and with member functions to read and display the matrix.
+
+
+ Prepare a class Student with suitable attributes and member functions. Add a friend function Predict to print the grade for a course.
