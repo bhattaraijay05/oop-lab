@@ -18,8 +18,8 @@ public:
     }
 
     void readData();
-    friend bool operator>(Student s1, Student s2);
-    friend bool operator==(Student s1, Student s2);
+    friend bool operator>(Student, Student);
+    friend bool operator==(Student, Student);
 };
 void Student::readData()
 {

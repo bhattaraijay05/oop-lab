@@ -11,9 +11,9 @@ class Matrix
 public:
     void enterData();
     void displayData();
-    friend bool operator==(Matrix m1, Matrix m2);
-    friend Matrix operator+(Matrix m1, Matrix m2);
-    friend Matrix operator-(Matrix m1, Matrix m2);
+    friend bool operator==(Matrix, Matrix);
+    friend Matrix operator+(Matrix, Matrix);
+    friend Matrix operator-(Matrix, Matrix);
 };
 
 void Matrix::enterData()

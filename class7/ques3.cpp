@@ -22,8 +22,8 @@ public:
     }
     void readData();
     void displayData();
-    friend Date operator++(Date d1);
-    friend Date operator++(Date d1, int);
+    friend Date operator++(Date );
+    friend Date operator++(Date , int);
 };
 
 void Date::readData()
