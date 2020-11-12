@@ -1,0 +1,3 @@
+1. Consider a class Student with marks. Compare marks of two students using comparison operators. 
+
+2. Write a C++ program to create a class called MATRIX using a two-dimensional array of integers. Implement the following operations by overloading the operator = = which checks the compatibility of two matrices m1 and m2 to be added and subtracted. Perform the addition and subtraction by overloading the operators + and – respectively. Display the results (sum matrix m3 and difference matrix m4).
