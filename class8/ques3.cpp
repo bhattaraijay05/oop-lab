@@ -35,17 +35,64 @@ void Employee::displayData()
 
 class SalesPerson : public Employee
 {
+public:
+    float bonus;
+    void readBonus()
+    {
+        cout << "Enter the bonus amount: " << endl;
+        cin >> bonus;
+    }
+    void displayBonus()
+    {
+        cout << "Type of Employee: " << bonus << endl;
+    }
 };
 class FullTimeSalesPerson : public SalesPerson
 {
+public:
+    void readDetails()
+    {
+        cout << "\nEnter the details of Full time sales person" << endl;
+        readData();
+        readBonus();
+    }
+    void displayDetails()
+    {
+        cout << "\nDetails of full time sales person" << endl;
+        displayData();
+        displayBonus();
+    }
 };
 
 class PartTimeSalesPerson : public SalesPerson
 {
+public:
+    void readDetails()
+    {
+        cout << "\nEnter the details of Part time sales person" << endl;
+        readData();
+        readBonus();
+    }
+    void displayDetails()
+    {
+        cout << "\nDetails of part time sales person" << endl;
+        displayData();
+        displayBonus();
+    }
 };
 
 int main()
 {
+    FullTimeSalesPerson f1;
+    PartTimeSalesPerson p1;
+    f1.readDetails();
+    p1.readDetails();
+
+    f1.displayDetails();
+    p1.displayDetails();
+
+    cout << "\nFull Time Sales Person works " << f1.workHours - p1.workHours << " more than Part Time Sales Person " << endl;
+    cout << "\nFull Time Sales Person gets bonus of " << f1.bonus << " while part Time Sales Person gets bonus of " << p1.bonus << endl;
 
     return 0;
 }
