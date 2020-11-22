@@ -44,7 +44,7 @@ public:
     }
     void displayBonus()
     {
-        cout << "Type of Employee: " << bonus << endl;
+        cout << "Bonus Amount: " << bonus << endl;
     }
 };
 class FullTimeSalesPerson : public SalesPerson
