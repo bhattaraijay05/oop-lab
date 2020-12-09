@@ -1,0 +1,17 @@
+1. Write a suitable program for the following
+class Employee{/*...*/};
+class Manager:public Employee{/*...*/};
+class Director:public Manager{/*...*/};
+class Temporary{/*...*/};
+class Secretary:public Employee{/*...*/};
+class Tsec:public Temporary,public Secretary{/*...*/};
+class Consultant:public Temporary,public Manager{/*...*/};
+
+
+1)
+Class A  - member variable int a, member function – void geta(int)
+Class B – member variable int b, member function – void getb(int)
+Class D : Public A, Public B 
+Class D – member function void display() – displays a and b
+Main method create object of D. Invoke all the three methods.
+2) Same program include display() function in class A and Class B – ambiquity

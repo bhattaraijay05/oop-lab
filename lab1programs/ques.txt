@@ -1,0 +1,44 @@
+
+Department of Information Science and Engineering
+LAB PROGRAMS (AY 2020-21)
+COURSE NAME:	Object Oriented Programming using C++		COURSE CODE: 19IS3PCOOP
+SEM : III 
+Given that an EMPLOYEE class contains following members: Employee Number, Employee Name, Basic, DA, IT, Net Salary. Member functions: to read the data, to calculate Net Salary and to print data members.  Write a C++ program to read the data of N employees and compute Net Salary of each employee. (Dearness Allowance (DA) = 52% of Basic and Income Tax (IT) = 30% of the gross salary. Net Salary = Basic + DA - IT).
+
+Write a C++ program to Create array of objects of class student with data members for storing his USN marks of six subjects for three tests and member functions to input display and calculate the avg marks for each subject taking best two of three marks. Write a tester program to test these classes. 
+
+
+Write a C++ program to create a class called COMPLEX and implement the following overloading functions ADD that return a COMPLEX number. 
+                        i. ADD (a, s2) – where a is an integer (real part) and s2 is a complex number. 
+                        ii. ADD (s1, s2) – where s1 and s2 are complex numbers.
+                             
+Write a program to find the transpose of a matrix using friend function and with member functions to read and display the matrix.
+
+Create a vehicle having a non-static data member registration number and a static data member count. Non-static member functions setregno() and getregno() are used to get and set the registration number. A static member function getVehiclecount() is used to return the number of vehicles in the garage. Use a constructor to increment the vehicle count when a vehicle is created and the destructor to decrement the count when the vehicle is destroyed.
+
+
+Write a C++ program to create a class called MATRIX using a two-dimensional array of integers. Implement the following operations by overloading the operator = = which checks the compatibility of two matrices m1 and m2 to be added and subtracted. Perform the addition and subtraction by overloading the operators + and – respectively. Display the results (sum matrix m3 and difference matrix m4).
+
+Design a class named PersonData with the following member variables lastName, firstName,  address, city, state and phone.  Write the appropriate constructor, accessor and mutator functions for these member variables. Next, design a class named CustomerData, which is derived from the PersonData class.  The CustomerData class should have the following member variables: customerNumber, email id. The customerNumber variable will be used to hold a unique integer for each customer. Write appropriate constructors, accessor and mutator functions for these member variables. Demonstrate an object of the CustomerData class in a simple program. 
+
+A retail store has a preferred customer plan where customers may earn discounts on all their purchases. The amount of a customer’s discount is determined by the amount of the customer’s cumulative purchases in the store.  When a preferred customer spends $500, he or she gets a 5% discount, 6% discount when he spends $1000 and $2,000 or more, he or she gets a 10% discount.  Design a class named PreferredCustomer, which is derived from the CustomerData class of Exercise 7. The PreferredCustomer class should have the following member variables purchasesAmount,  discountLevel.  The purchasesAmount variable holds the total of a customer’s purchases. The discountLevel variable should be set to the correct discount percentage, according to the store’s preferred customer plan. Write appropriate member functions for this class and demonstrate it in a simple program.
+
+ Imagine a publishing company that markets both book and audio cassette versions of its work. Create a class publication that stores the title and price of a publication and member functions getdata() and displaydata(). From this class derive two classes: book which adds a page count and tape which adds a plain time in minutes. Write a main program to test the book and tape classes by creating instances of them. 
+
+Implement the following relationship using appropriate member variables and member functions.
+
+
+
+Create a base class called SHAPE. Use this class to store two double type values that could be used to compute the area of figures. Derive two specific classes called Triangle and Rectangle from the class SHAPE. Add to the base class, a member function get_data() to initialize base class data member and other member function display_area() to compute and display the area of figure. Make display_area() as a virtual function and redefine this function in the derived classes to suit their requirements.
+
+Design a Ship class with member variables name and year with constructors and appropriate accessors and mutators.  Virtual print function that displays the ship’s name and the year it was built. Design a CruiseShip class that is derived from the Ship class. The CruiseShip class should have the following members a variable for the maximum number of passengers and appropriate accessors, mutators and constructor. A print function that overrides the print function in the base class. The CruiseShip class’s print function should display only the ship’s name and the maximum number of passengers. Design a CargoShip class that is derived from the Ship class. The CargoShip class should have the following members a member variable for the cargo capacity, constructor, accessors and mutators. A print function that overrides the print function in the base class. The CargoShip class’s print function should display only the ship’s name and the ship’s cargo capacity. Demonstrate the classes in a program that has an array of Ship pointers. The array elements should be initialized with the addresses of dynamically allocated Ship. The program should then step through the array, calling each object’s print function.
+
+Write a C++ program to implement an array using class templates. Implement the following operations: Adding two arrays, finding the max and min in an array.
+
+Write a program to sort using bubble sort by applying function templates.
+
+Write a C++ program to create a class called EXPRESSION. Using appropriate member functions accepts a valid arithmetic expression. Evaluate the expression and divide the result by another variable ‘d’. throw an exception “divide by zero” if the value of d=0. Call a read function to read the ‘d’ value again. Rethrow the exception if d still contains 0.
+16. Write a program that reads from a file which contains real numbers and displays the minimum, maximum and average of the numbers in the file. The user should be able to enter the name of the input file from the keyboard.
+17. Write a program that reads the contents of a file and creates an exact copy of the file. The user should be able to enter the names of the input and output files from the keyboard.
+
+Faculty Incharge : Dr. VSR, RK
