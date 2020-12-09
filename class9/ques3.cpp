@@ -13,17 +13,19 @@ using namespace std;
 class A
 {
 public:
+    int a;
     void geta(int a)
     {
-        cout << a;
+        cout << a << endl;
     }
 };
-class B : public A
+class B
 {
 public:
+    int b;
     void getb(int b)
     {
-        cout << b;
+        cout << b << endl;
     }
 };
 
@@ -33,10 +35,12 @@ public:
     void Display()
     {
         A::geta(5);
+        B::getb(10);
     }
 };
 int main()
 {
-    A d1;
+    D d1;
+    d1.Display();
     return 0;
 }
