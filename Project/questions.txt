@@ -1,0 +1,2 @@
+1: Which of the following is not C like Language?
+2: Which of the following Languages is not used for Machine Learning?

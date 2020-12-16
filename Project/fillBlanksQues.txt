@@ -1,0 +1,2 @@
+Python is a/an ....... language.
+C is a/an ...... language.
