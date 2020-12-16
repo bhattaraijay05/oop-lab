@@ -10,8 +10,8 @@ class Student
 
 public:
     void readStudentDetails();
-    void getQuestions(string);         //Function Overloading
-    void getQuestions(string, string); //Function Overloading
+    void getQuestions(string, string);         //Function Overloading
+    void getQuestions(string, string, string); //Function Overloading
     void displayResult();
     void saveResult();
     friend bool operator<(Student, Student);  //friend function and operator overloading
@@ -21,20 +21,20 @@ public:
 class QuizStudent : public Student //Inheritance
 {
 public:
-    void getQuestions(string ques, string opt) //Function Overriding
+    void getQuestions(string ques, string opt, string ans) //Function Overriding
     {
         cout << "Your Questions" << endl;
-        Student::getQuestions(ques, opt);
+        Student::getQuestions(ques, opt, ans);
     }
 };
 
 class FillInTheBlanksStudent : public Student //Inheritance
 {
 public:
-    void getQuestions(string ques) //Function Overriding
+    void getQuestions(string ques, string ans) //Function Overriding
     {
         cout << "\nYour Questions" << endl;
-        Student::getQuestions(ques);
+        Student::getQuestions(ques, ans);
     }
 };
 
@@ -77,11 +77,11 @@ void Student::displayResult()
          << "Marks : " << marks << endl;
 }
 
-void Student::getQuestions(string quesFile)
+void Student::getQuestions(string quesFile, string ansFile)
 {
     fstream question, answerFile;
     question.open(quesFile);
-    answerFile.open("fillBlanksAns.txt");
+    answerFile.open(ansFile);
     string ques, correctAnswer;
     while (getline(question, ques))
     {
@@ -98,11 +98,11 @@ void Student::getQuestions(string quesFile)
     }
 }
 
-void Student::getQuestions(string quesFile, string opFile)
+void Student::getQuestions(string quesFile, string opFile, string ansFile)
 {
     fstream question, option, answerFile;
     question.open(quesFile);
-    answerFile.open("answers.txt");
+    answerFile.open(ansFile);
     option.open(opFile);
     string ques, opts, correctAnswer;
     while (getline(question, ques))
@@ -138,16 +138,16 @@ int main()
         for (int i = 0; i < numOfStu; i++)
         {
             Q[i].readStudentDetails();
-            Q[i].getQuestions("questions.txt", "options.txt");
+            Q[i].getQuestions("questions.txt", "options.txt", "answers.txt");
             Q[i].displayResult();
             Q[i].saveResult();
         }
         if (Q[0] < Q[1])
-            cout << "Student 1 got higher marks. " << endl;
+            cout << "Student 2 got higher marks. " << endl;
         else if (Q[0] == Q[1])
             cout << "Both got the same mark. " << endl;
         else
-            cout << "Student 2 got higher marks. " << endl;
+            cout << "Student 1 got higher marks. " << endl;
     }
     else if (testChoice == 2)
     {
@@ -155,15 +155,15 @@ int main()
         for (int i = 0; i < numOfStu; i++)
         {
             F[i].readStudentDetails();
-            F[i].getQuestions("fillBlanksQues.txt");
+            F[i].getQuestions("fillBlanksQues.txt", "fillBlanksAns.txt");
             F[i].displayResult();
             F[i].saveResult();
         }
         if (F[0] < F[1])
-            cout << "Student 1 got higher marks. " << endl;
+            cout << "Student 2 got higher marks. " << endl;
         else if (F[0] == F[1])
             cout << "Both got the same mark. " << endl;
         else
-            cout << "Student 2 got higher marks. " << endl;
+            cout << "Student 1 got higher marks. " << endl;
     }
 }
