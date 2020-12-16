@@ -1,2 +1,2 @@
-C++             Python          Javascript          Dart
-C               Python          R                   Java
+A: C++             B: Python          C: Javascript          D: Dart
+A: C               B: Python          C: R                   D: Java

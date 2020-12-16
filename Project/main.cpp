@@ -5,8 +5,8 @@ using namespace std;
 
 class Student
 {
-    string firstName, lastName, answer;
-    int marks = 20;
+    string firstName, lastName, answer, usn;
+    int marks = 0;
 
 public:
     void readStudentDetails();
@@ -14,7 +14,6 @@ public:
     void getQuestions(string, string); //Function Overloading
     void displayMark();
     void saveResult();
-    Student operator++(int);
 };
 
 class QuizStudent : public Student //Inheritance
@@ -43,13 +42,16 @@ void Student::readStudentDetails()
     cin >> firstName;
     cout << "\nLast Name" << endl;
     cin >> lastName;
+    cout << "\nUSN" << endl;
+    cin >> usn;
 }
 
 void Student::saveResult()
 {
     fstream file;
-    file.open(firstName, fstream::out);
+    file.open(usn, fstream::out);
     file << "Name : " << firstName << " " << lastName << endl
+         << "USN : " << usn << endl
          << "Marks : " << marks << endl;
     file.close();
 }
@@ -58,32 +60,38 @@ void Student::displayMark()
 {
     cout << "\n...Result..." << endl;
     cout << "Name : " << firstName << " " << lastName << endl
+         << "USN : " << usn << endl
          << "Marks : " << marks;
 }
 
 void Student::getQuestions(string quesFile)
 {
-    fstream question;
+    fstream question, answerFile;
     question.open(quesFile);
-
-    string str;
-    while (getline(question, str))
+    answerFile.open("fillBlanksAns.txt");
+    string ans;
+    while (getline(question, ans))
     {
-        cout << str << "\n";
+        cout << ans << "\n";
         cin >> answer;
-        // if (answer == "10")
-        // {
-        //     cout << marks;
-        // }
+        while (getline(answerFile, ans))
+        {
+            if (ans == answer)
+            {
+                marks = marks + 1;
+            }
+            break;
+        }
     }
 }
 
 void Student::getQuestions(string quesFile, string opFile)
 {
-    fstream question, option;
+    fstream question, option, answerFile;
     question.open(quesFile);
+    answerFile.open("answers.txt");
     option.open(opFile);
-    string ques, opts;
+    string ques, opts, ans;
     while (getline(question, ques))
     {
         cout << ques << "\n";
@@ -92,6 +100,14 @@ void Student::getQuestions(string quesFile, string opFile)
 
             cout << opts << "\n";
             cin >> answer;
+            while (getline(answerFile, ans))
+            {
+                if (ans == answer)
+                {
+                    marks = marks + 1;
+                }
+                break;
+            }
             break;
         }
     }
