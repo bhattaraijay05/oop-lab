@@ -1,2 +1,3 @@
-Python is a/an ....... language.
-C is a/an ...... language.
+Python is a/an ....... language. (interpreted/compiled)
+C is a/an ...... language. (interpreted/compiled)
+A constructor can be virtual? (true/false)

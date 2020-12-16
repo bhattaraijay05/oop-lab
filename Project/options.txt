@@ -1,2 +1,4 @@
 A: C++             B: Python          C: Javascript          D: Dart
-A: C               B: Python          C: R                   D: Java
+A: Android App     B: IOS App         C: None                D: Both A and B
+A: Procedural      B: Modular         C: Object Oriented     D: Structured
+A: Class           B: Data            C: Polymorphism        D: Object

@@ -143,11 +143,11 @@ int main()
             Q[i].saveResult();
         }
         if (Q[0] < Q[1])
-            cout << "Student 2 got higher marks. " << endl;
+            cout << "\n\nStudent 2 got higher marks. " << endl;
         else if (Q[0] == Q[1])
-            cout << "Both got the same mark. " << endl;
+            cout << "\n\nBoth got the same mark. " << endl;
         else
-            cout << "Student 1 got higher marks. " << endl;
+            cout << "\n\nStudent 1 got higher marks. " << endl;
     }
     else if (testChoice == 2)
     {
@@ -160,10 +160,10 @@ int main()
             F[i].saveResult();
         }
         if (F[0] < F[1])
-            cout << "Student 2 got higher marks. " << endl;
+            cout << "\n\nStudent 2 got higher marks. " << endl;
         else if (F[0] == F[1])
-            cout << "Both got the same mark. " << endl;
+            cout << "\n\nBoth got the same mark. " << endl;
         else
-            cout << "Student 1 got higher marks. " << endl;
+            cout << "\n\nStudent 1 got higher marks. " << endl;
     }
 }
