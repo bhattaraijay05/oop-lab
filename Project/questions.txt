@@ -1,4 +1,4 @@
-1: Which of the following is not C-Family Programming Language?
+1: Which of the following donot follow C Programming Language syntax?
 2: React Native can be used for making?
 3: C++ belongs to which category of Programming Language?
 4: ........ is a template for entities that have common behaviour.
