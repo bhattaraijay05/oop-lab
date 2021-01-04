@@ -1,8 +1,9 @@
-#include <iostream>
-#include <fstream>
-#include <string>
+#include <iostream> //for providing basic input output functionality to the program
+#include <fstream>  //for file handling
+#include <string>   //for storing the strings
 using namespace std;
 
+//class Student is the parent class
 class Student
 {
     string firstName, lastName, studentAnswer, usn;
@@ -18,6 +19,7 @@ public:
     friend bool operator==(Student, Student); //friend function and operator overloading
 };
 
+//QuizStudent class would be the inherited class from class student for getting and storing quiz questions
 class QuizStudent : public Student //Inheritance
 {
 public:
@@ -28,6 +30,7 @@ public:
     }
 };
 
+//FillInTheBlanksStudent class would be the inherited class from class student for getting and storing fill in the blanks questions
 class FillInTheBlanksStudent : public Student //Inheritance
 {
 public:
@@ -37,17 +40,17 @@ public:
         Student::getQuestions(ques, ans);
     }
 };
-
+//Operator overloading to check the highest marks between two students
 bool operator<(Student S1, Student S2)
 {
     return S1.marks < S2.marks;
 }
-
+//Operator overloading to check the if both students got equal marks
 bool operator==(Student S1, Student S2)
 {
     return S1.marks == S2.marks;
 }
-
+//This method would be responsible for reading the student details
 void Student::readStudentDetails()
 {
     cout << "\nEnter your details " << endl;
@@ -58,17 +61,17 @@ void Student::readStudentDetails()
     cout << "\nUSN" << endl;
     cin >> usn;
 }
-
+//This method saveResult will be called to save the student result inside a file
 void Student::saveResult()
 {
     fstream file;
-    file.open(usn, fstream::out);
+    file.open(usn, fstream::out); //the method (open) called from the library fstream is responsible for creating a file based on the student's name and storing the result
     file << "Name : " << firstName << " " << lastName << endl
          << "USN : " << usn << endl
          << "Marks : " << marks << endl;
     file.close();
 }
-
+//displayResult method will be called after giving the exam to display the total mark of the student
 void Student::displayResult()
 {
     cout << "\n...Result..." << endl;
@@ -76,12 +79,13 @@ void Student::displayResult()
          << "USN : " << usn << endl
          << "Marks : " << marks << endl;
 }
-
+//The important one-> this function for getting the question specifically this will call the quesfile and answer file for fill in the blanks type of question
 void Student::getQuestions(string quesFile, string ansFile)
 {
     fstream question, answerFile;
     question.open(quesFile);
     answerFile.open(ansFile);
+    //again the method (open) opens the question file and answer file, diaplay the question file and compare the user answer with correct answer
     string ques, correctAnswer;
     while (getline(question, ques))
     {
@@ -97,7 +101,7 @@ void Student::getQuestions(string quesFile, string ansFile)
         }
     }
 }
-
+// this is the  function overloading for getQuestions for getting the question specifically this will call the quesfile,option file and answer file for quiz type of question
 void Student::getQuestions(string quesFile, string opFile, string ansFile)
 {
     fstream question, option, answerFile;
@@ -129,7 +133,7 @@ void Student::getQuestions(string quesFile, string opFile, string ansFile)
 int main()
 {
     int testChoice, numOfStu = 2;
-    cout << "Enter your choice for the examination \n\n1: Quiz\n2: Fill In the blanks\n"
+    cout << "Enter your choice for the examination \n\n1: MCQ Question\n2: Fill In the blanks\n"
          << endl;
     cin >> testChoice;
     if (testChoice == 1)
