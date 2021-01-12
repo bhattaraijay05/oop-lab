@@ -1,0 +1,8 @@
+Assume that a bank maitains two kinds of accounts for customers,one called as savings account and the other as current account. The saving account provides compound interest and withdrawal facilities but no cheque book facility. The current account provides cheque book facility but no interest. Current account holders should also maintain a minimum balance and if the balance falls below this level, a service charge is imposed.  Class account stores customer name, account number and the type of account.
+         Include member functions:-
+Accept deposit from a customer and update the balance
+Display the balance
+Compute and deposit interest
+Permit withdrawal and update balance
+Check for minimum balance, impose penalty and update the balance
+Include constructors in all the classes
