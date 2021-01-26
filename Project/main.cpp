@@ -130,7 +130,7 @@ void Student::getQuestions(string quesFile, string opFile, string ansFile)
     }
 }
 
-int main()
+void takeTest()
 {
     int testChoice, numOfStu = 2;
     cout << "Enter your choice for the examination \n\n1: MCQ Question\n2: Fill In the blanks\n"
@@ -170,4 +170,80 @@ int main()
         else
             cout << "\n\nStudent 1 got higher marks. " << endl;
     }
+}
+
+void selectSem(int semChoice)
+{
+    try //try catch block to throw exception if the user input is more than 3 semester
+    {
+        cout << "Enter your semester \n1:3rd\n2:4th\n3:5th\n"
+             << endl;
+        cin >> semChoice;
+
+        if (semChoice <= 3)
+        {
+            if (semChoice == 1)
+            {
+                cout << "Your selected semester is 3rd" << endl;
+                takeTest();
+            }
+            else if (semChoice == 2)
+            {
+
+                cout << "Your selected semester is 4th" << endl;
+                takeTest();
+            }
+            else
+            {
+                cout << "Your selected semester is 5th" << endl;
+                takeTest();
+            }
+        }
+        else
+        {
+            throw(semChoice);
+        }
+    }
+    catch (int myChoice)
+    {
+        cout << "Access denied - You can only select 3rd, 4th and 5th semester.\n";
+        cout << "Selected Semester is: " << myChoice;
+    }
+}
+
+int main()
+{
+    bool dothis = false;
+    do
+    {
+        int departmentChoice, semChoice;
+        cout << "Enter your department \n1: Information Science \n2:Mechanical \n3:Civil \n4:Computer Science\n ";
+        cin >> departmentChoice;
+
+        if (departmentChoice == 1)
+        {
+            cout << "Your selected branch is Information Science" << endl;
+            selectSem(semChoice);
+        }
+        else if (departmentChoice == 2)
+        {
+            cout << "Your selected branch is Mechanical" << endl;
+            selectSem(semChoice);
+        }
+        else if (departmentChoice == 3)
+        {
+            cout << "Your selected branch is Civil" << endl;
+            selectSem(semChoice);
+        }
+        else if (departmentChoice == 4)
+        {
+            cout << "Your selected branch is Computer Science" << endl;
+            selectSem(semChoice);
+        }
+        else
+        {
+            cout << "Enter valid choice" << endl;
+            dothis = true;
+        }
+    } while (dothis);
 }
