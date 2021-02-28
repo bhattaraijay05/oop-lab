@@ -3,6 +3,7 @@
 #include <string>   //for storing the strings
 using namespace std;
 string department, semester;
+
 //class Student is the parent class
 class Student
 {
@@ -218,6 +219,12 @@ void selectSem(int semChoice)
     }
 }
 
+template <typename T> //Usage of templates
+T myDept(T dep)
+{
+    return dep;
+}
+
 int main()
 {
     bool dothis = false;
@@ -229,25 +236,25 @@ int main()
 
         if (departmentChoice == 1)
         {
-            cout << "Your selected branch is Information Science and Engineering" << endl;
+            cout << myDept<string>("Your selected branch is Information Science and Engineering") << endl;
             department = "Information Science and Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 2)
         {
-            cout << "Your selected branch is Mechanical Engineering " << endl;
+            cout << myDept<string>("Your selected branch is Mechanical Engineering") << endl;
             department = "Mechanical Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 3)
         {
-            cout << "Your selected branch is Civil Engineering" << endl;
+            cout << myDept<string>("Your selected branch is Civil Engineering") << endl;
             department = "Civil Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 4)
         {
-            cout << "Your selected branch is Computer Science and Engineering" << endl;
+            cout << myDept<string>("Your selected branch is Computer Science and Engineering") << endl;
             department = "Computer Science and Engineering";
             selectSem(semChoice);
         }
