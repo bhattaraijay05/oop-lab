@@ -2,7 +2,7 @@
 #include <fstream>  //for file handling
 #include <string>   //for storing the strings
 using namespace std;
-
+string department, semester;
 //class Student is the parent class
 class Student
 {
@@ -66,7 +66,9 @@ void Student::saveResult()
 {
     fstream file;
     file.open(usn, fstream::out); //the method (open) called from the library fstream is responsible for creating a file based on the student's name and storing the result
-    file << "Name : " << firstName << " " << lastName << endl
+    file << "Department : " << department << endl
+         << "Semester : " << semester << endl
+         << "Name : " << firstName << " " << lastName << endl
          << "USN : " << usn << endl
          << "Marks : " << marks << endl;
     file.close();
@@ -75,7 +77,9 @@ void Student::saveResult()
 void Student::displayResult()
 {
     cout << "\n...Result..." << endl;
-    cout << "Name : " << firstName << " " << lastName << endl
+    cout << "Department : " << department << endl
+         << "Semester : " << semester << endl
+         << "Name : " << firstName << " " << lastName << endl
          << "USN : " << usn << endl
          << "Marks : " << marks << endl;
 }
@@ -185,17 +189,20 @@ void selectSem(int semChoice)
             if (semChoice == 1)
             {
                 cout << "Your selected semester is 3rd" << endl;
+                semester = "3rd";
                 takeTest();
             }
             else if (semChoice == 2)
             {
 
                 cout << "Your selected semester is 4th" << endl;
+                semester = "4th";
                 takeTest();
             }
             else
             {
                 cout << "Your selected semester is 5th" << endl;
+                semester = "5th";
                 takeTest();
             }
         }
@@ -207,7 +214,7 @@ void selectSem(int semChoice)
     catch (int myChoice)
     {
         cout << "Access denied - You can only select 3rd, 4th and 5th semester.\n";
-        cout << "Selected Semester is: " << myChoice;
+        cout << "Selected Semester is: " << myChoice << endl;
     }
 }
 
@@ -217,27 +224,31 @@ int main()
     do
     {
         int departmentChoice, semChoice;
-        cout << "Enter your department \n1: Information Science \n2:Mechanical \n3:Civil \n4:Computer Science\n ";
+        cout << "Enter your department \n1:Information Science and Engineering \n2:Mechanical Engineering  \n3:Civil Engineering \n4:Computer Science and Engineering\n ";
         cin >> departmentChoice;
 
         if (departmentChoice == 1)
         {
-            cout << "Your selected branch is Information Science" << endl;
+            cout << "Your selected branch is Information Science and Engineering" << endl;
+            department = "Information Science and Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 2)
         {
-            cout << "Your selected branch is Mechanical" << endl;
+            cout << "Your selected branch is Mechanical Engineering " << endl;
+            department = "Mechanical Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 3)
         {
-            cout << "Your selected branch is Civil" << endl;
+            cout << "Your selected branch is Civil Engineering" << endl;
+            department = "Civil Engineering";
             selectSem(semChoice);
         }
         else if (departmentChoice == 4)
         {
-            cout << "Your selected branch is Computer Science" << endl;
+            cout << "Your selected branch is Computer Science and Engineering" << endl;
+            department = "Computer Science and Engineering";
             selectSem(semChoice);
         }
         else
